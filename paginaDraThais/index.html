@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thais Medeiros | Ortodontia Moderna</title>
+    <link rel="icon" href="/paginaDraThais/assets/icon/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-site">
+          <img src="https://cdn-icons-png.flaticon.com/512/5893/5893304.png" href="#" width="4%" /> <!-- Icone  -->
+        <nav>
+            <ul class="a">
+                <li><a href="#page1">Home</a></li>
+                <li><a href="#page2">Tratamentos</a></li>
+                <li><a href="#page3">Sobre</a></li>
+                <li><a href="#page4">Consultório</a></li>
+                <li><a href="#page5">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="page1" class="page">
+      <a href=" ">page1</a>
+    </section>
+  
+    <section id="page2" class="page">
+      <a href=" ">page2</a>
+    </section>
+  
+    <section id="page3" class="page">
+      <a href=" ">page3</a>
+    </section>
+  
+    <section id="page4" class="page">
+      <a href=" ">page4</a>
+    </section>
+  
+    
+    <footer id="page5" >
+      <a href=" ">page5</a>
+      <h2>Endereço: </h2>
+      <h2>Contato:</h2>
+      <h2>Email:</h2>
+
+      
+    </footer>
+
+
+    <!--Sumir navBar  -->
+    <script>
+        const header = document.querySelector(".top-site");
+        const body = document.querySelector("body")
+        header.style.background='none';
+
+        //Janela(window) e site(document)
+        // evento chamado scroll, JavaScript é uma linguagem dirigida a eventos.
+        //Criamos uma escuta para o evento.
+        //forma mais simples de criar uma função, é a => arrow function
+        window.addEventListener('scroll',(e)=>{
+            console.log(body.clientHeight)
+
+            if(window.scrollY < 100){
+                header.style.background= 'none';
+
+                
+            }else if(scrollY >= (body.clientHeight - 1000)){
+                    header.style.background= ' rgb(92,222,222)';
+                    header.style.background= ' linear-gradient(234deg, rgba(92,222,222,0.5662640056022409) 0%, rgba(227,204,190,0.5242471988795518) 58%, rgba(33,230,39,0.3309698879551821) 100%)';
+                    
+                    header.classList.add("disable");
+                    
+            }
+            else{           
+                
+                header.classList.remove("disable");
+                header.style.background='#fff';
+            }
+        });
+
+    </script>
+</body>
+</html>
