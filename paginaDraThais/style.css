@@ -1,212 +1,100 @@
 @font-face {
-  font-family: "Open Sans";
   src: url(../fonts/OpenSans/OpenSans-Regular.ttf) format("truetype");
   font-weight: normal;
 }
 @font-face {
-  font-family: "Open Sans";
   src: url(../fonts/OpenSans/OpenSans-Light.ttf) format("truetype");
   font-weight: 300;
 }
 @font-face {
-  font-family: "Open Sans";
   src: url(../fonts/OpenSans/OpenSans-Bold.ttf) format("truetype");
   font-weight: bold;
 }
+@font-face {
+  src: url(./assets/font/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+  src: url(./assets/font/Raleway-Italic-VariableFont_wght.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:ital,wght@0,300;0,500;1,400&display=swap');
+
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
   color: rgb(33, 15, 88);
   height: 2000px;
 }
 
+
+/* ---------------------- navBar --------------------------- */
 header.top-site {
-  transition-duration: 0.5s;
+  display: flex;
   position: fixed;
+  justify-content: center;
+  width: 100%;
+  height: 10%;
   top: 0;
   z-index: 100;
-  width: 100%;
-  height: 100px;
   background-color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: center;
-  align-items: center;  
+  transition-duration: 0.5s;
 }
 
 header.top-site > nav { 
   width: 80%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 header.top-site > nav > ul {
   margin: 0;
+  padding: 0%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  list-style: none;
 }
 
 header.top-site > nav > ul li {
-  list-style: none;
-  margin-right: 20px;
+  text-align: center;
+  width: 100%;
 }
 
 header.top-site > nav > ul li a {
   text-decoration: none;
   font-weight: bold;
   color: #222;
-  font-family: "Open Sans";
-}
-header.disable > nav > ul li > a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #fff;
-  font-family: "Open Sans";
 }
 
-section.full-banner {
-  width: 100%;
-  height: 100vh;
-  background: url("../images/c6bank/hero-bg-xs.webp") no-repeat;
-  background-size: cover;
+header.top-site > nav > ul li a:hover{
+  font-size: 120%;
+  transition: 0.6s;
 }
 
-section.full-banner > .destak {
-  width: 40%;
-  height: 80vh;
-  position: absolute;
-  bottom: 0;
-  left: 5%;
-}
-section.full-banner > .destak > h1 {
-  font-weight: 300;
-  font-size: 3.5rem;
-  margin-top: 0.1em;
-  line-height: 1em;
-}
-section.full-banner > .destak > h2,
-section.full-banner > .destak h3 {
-  font-weight: 300;
-  margin-bottom: 1em;
-}
-section.full-banner > .destak h3 {
-  width: 100%;
-  background: rgba(36, 36, 36, 0.35);
-  color: #eee;
-  font-weight: normal;
-  line-height: 2.5em;
-  font-size: 0.9em;
-  padding: 0 2%;
-  border-radius: 25px;
-}
-::selection {
-  background: #ffe45c;
-  color: #242424;
-}
-button.disable {
-  background: none;
-  border: solid 0.5px rgba(36, 36, 36, 0.8);
-}
-button.disable:hover {
-  background: rgba(36, 36, 36, 0.2);
-}
-button {
-  background: linear-gradient(150deg, #ffe45c 0%, #ffc900 100%);
-  width: 290px;
-  line-height: 40px;
-  border-radius: 25px;
-  border: none;
-  text-transform: uppercase;
-}
-button:hover {
-  background: linear-gradient(150deg, #ffe668 0%, #ffdc5f 100%);
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-.destak h3 > span {
-  display: inline-block;
-  line-height: 1.6em;
-  width: fit-content;
-  background-color: #006d8f;
-  border-radius: 25px;
-  padding: 0 3%;
-  font-weight: bold;
-}
-@media (min-width: 992px) {
-  section.full-banner {
-    background: url("../images/c6bank/hero-bg.webp") no-repeat;
-    background-size: cover;
-  }
-}
-
-.full-banner-form {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #dddcda;
-  background: url("../images/c6bank/hero-bg-xs.webp") no-repeat;
-}
-.container-login {
-  width: 420px;
-  height: 50vh;
-  display: flex;
-}
-.container-login form {
-  background: rgba(36, 36, 36, 0.35);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5%;
-  border-radius: 5%;
-}
-.container-login form label {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-}
-.container-login form label input {
-  width: 100%;
-}
-.container-login form p {
-  margin: 0;
-  font-weight: bold;
-  color: #222;
-  font-family: "Open Sans";
-}
-.container-login form p a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #222;
-  font-family: "Open Sans";
-}
-.container-login form p a:hover {
-  color: #fff;
-}
-@media (min-width: 992px) {
-  section.full-banner-form {
-    background: url("../images/c6bank/hero-bg.webp") no-repeat;
-    background-size: cover;
-  }
-}
-
-/* Criei a partir daqui */
+/* ------------------------------------------------------------ */
+/* ----------------- Criei a partir daqui --------------------- */
+/* ------------------------------------------------------------ */
 
 .page {
-  height: 120vh;
+  height: 100vh;
   width: 100%;
+  border-left:2px solid rgb(250, 240, 230);
+  border-right: 2px solid rgb(250, 240, 230);
+  border-top: 2px solid rgb(250, 240, 230);
 }
 
 /* ----------------------- Page1 --------------------------- */
 /* Na verdade isso vai ser a page 4 */
 #page1{
-  background-color: rgb(230, 161, 132);
+  /* background-color: rgb(255, 218, 185); */
+  background: rgb(250,240,230);
+  background: radial-gradient(circle, rgba(250,240,230,1) 15%, rgba(255,218,185,1) 98%);
   height: 95vh;
   display: flex;
   align-items: baseline;
@@ -217,32 +105,45 @@ button:hover {
   height: 200px;
   width: 250px;
   bottom: 50vh;
-  left: 20vh;
+  left: 30vh;
 }
 #imgProfile{
   object-fit: cover;
   position:absolute;
   height:fit-content;
-  width: 600px;;
+  width: 65vh;
+  height: 92vh;
+  right: 20vh;
   bottom: 5vh;
-  right: 5vh;
 }
 
 /* ----------------------- Page2 --------------------------- */
 #page2{
-  display: flex;
+  margin: 0;
   background: rgb(240,242,242);
   background: linear-gradient(166deg, rgba(240,242,242,0.9051995798319328) 0%, rgba(213,164,132,0.5242471988795518) 58%, rgba(230,145,33,0.7987570028011204) 100%);
 }
-.container{
-  display: flex;
-  flex: 1 1 1;
+#page2 h2{
+  margin-top: 0;
+  padding-top: 15px;
   text-align: center;
-  padding: 60px 25px;
-  flex: 1 1 1;
-  
 }
-#skills-section {
+#page2 div{
+  align-items: center;
+}
+.container{
+  grid-template-columns: repeat(2,1fr);
+  display: grid;
+  text-align: left;
+  justify-items:center;
+}
+.tratamento-img{
+  background: url(./assets/img/foto2.webp);
+  height: 70vh;
+  width: 70vh;
+}
+
+#section {
   margin-top: -100px;
   background-color: #FFF;
   width: 80%;
@@ -252,87 +153,186 @@ button:hover {
   border-radius: 10px;
 }
 
-#skills-section .container {
+#section .container {
   display: flex;
   flex-direction: row;
   justify-content: center;   
 }
 
-.skills-container {
+.container {
   flex: 1 1 1;
   text-align: center;
   padding: 60px 25px;
 }
-
-.central {
-  border-left: 1px solid #CCC;
-  border-right: 1px solid #CCC;
-}
-
-.skills-container h3 {
-  color: #ED1E24;
+.container h3 {
+  color: #98107a;
   font-size: 20px;
 }
 
-.skills-container img {
+.container img {
   height: 60px;
   padding: 15px;
-  border-radius: .5rem;
+  border-radius: 5%;
   margin-bottom: 25px;
-  border-top: 1px solid black;
-  border-bottom: 4px solid black;
-  border-right: 4px solid black;
-  border-left: 1px solid black;
 }
 
-.skills-container .subtitle {
+.container .subtitle {
   font-weight: bold;  
-  color: #ED1E24;
+  color: #4a5dd9;
   margin-top: 50px;
   margin-bottom: 15px;
 }
 
-.skills-container p {
+.container p {
   line-height: 25px;
 }
 
 /* ----------------------- Page3 --------------------------- */
 #page3{
-  display: flex;
+  height: auto;
   background: rgb(240,242,242);
   background: linear-gradient(166deg, rgba(240,242,242,0.9051995798319328) 0%, rgba(213,164,132,0.5242471988795518) 58%, rgba(230,145,33,0.7987570028011204) 100%);
+  
+}
+.img{
+  display: grid;
+  justify-content: center;
+}
+#page3 .container{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  padding: 0;
+  margin:0px 5px 0px 15px;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: left;
+  font-weight: bold;
+}
+#page3 .container img{
+  display: grid;
+  width: 50vh;
+  height: 50vh;
+  border-radius: 5%;
+  border: none;
+}
+#page3 .container h3{
+  text-align: center;
+  height: auto;
+}
+#page3 div{
+  align-items: center;
 }
 
 /* ----------------------- Page4 --------------------------- */
 #page4{
-  display: flex;
-  background: rgb(240,242,242);
-  background: linear-gradient(166deg, rgba(240,242,242,0.9051995798319328) 0%, rgba(213,164,132,0.5242471988795518) 58%, rgba(230,145,33,0.7987570028011204) 100%);
+  height: auto;
+  background: rgb(255, 228, 196);
+  /* background: linear-gradient(166deg, rgba(240,242,242,0.9051995798319328) 0%, rgba(213,164,132,0.5242471988795518) 58%, rgba(230,145,33,0.7987570028011204) 100%); */
 }
+#page4 h2{
+  margin-top: 0;
+  padding-top: 15px;
+  text-align: center;
+}
+.texto-img{
+  display: grid;
+  justify-content: left;
+}
+.img{
+  display: grid;
+  justify-content: center;
+}
+#page4 .container{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  padding: 0;
+  margin:0px 5px 0px 15px;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  padding-left: 5%;
+  text-align: left;
+  font-weight: bold;
+}
+#page4 .container img{
+  /* Colquei bordar pra ver como está essa div e o espaço que está ocupando */
+  /* background-color: #222;  */
+  display: grid;
+  width: 50vh;
+  height: 50vh;
+  border-radius: 5%;
+  border: none;
+  
+}
+
 
 /* ----------------------- footer --------------------------- */
 
 footer{
-  display: flex;
-  height: 50vh;
+  height: 70vh;
   width: 100%;
-  background: rgb(49, 26, 3);
+  background: rgb(250,240,230);
+  background: linear-gradient(180deg, rgba(250,240,230,1) 10%, rgba(220,220,220,1) 90%);
+  padding: 15px;
+  border-left:2px solid rgb(250, 240, 230);
+  border-right: 2px solid rgb(250, 240, 230);
+  border-top: 2px solid rgb(250, 240, 230);
+  font-weight: bold;
 }
+
+footer a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  text-align: left;
+}
+
+footer a:hover{
+  text-decoration: underline;
+  transition: 0.6s;
+}
+
+.footer-class{
+  display: grid;
+  grid-template-columns: 2fr 3fr 3fr 1fr;
+  margin-top: 10px;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+}
+
+.material-symbols-outlined {
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  margin: 0;
+}
+
 .contatoBox{
   text-decoration:solid;
   font-weight: bold;
-  color: rgb(255, 255, 255);
-  font-family: "Open Sans";
+  color: rgb(0, 0, 0);
+  padding-left: 20px;
 }
 .contatoBox a{
   display: flex;
   text-decoration: none;
   font-weight: bold;
-  color: rgb(255, 255, 255);
-  font-family: "Open Sans";
+  color:rgb(0, 0, 0);
   flex-direction: row;
-  
+  margin-bottom: 13px;
 }
+.contatoBox p{
+  margin-bottom: 15px;
+}
+
+.contatoBox .material-symbols-outlined{
+  padding-right: 30px;
+  margin: 0;
+}
+
 #iconFooter{
   object-fit: cover;
   position:static;
@@ -340,6 +340,35 @@ footer{
   width: 250px;
   bottom: 5vh;
   right: 5vh; 
+}
+#mapIcon{
+  border-radius: 3%;
+}
+
+@media (max-width: 992px){
+  .footer-class{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+    padding: 5px;
+  }
+    
+    .endereco a{
+      text-decoration: none;
+      color: wheat;
+      margin: 0;
+      text-align: center;
+    } 
+    #iconFooter{
+      object-fit: cover;
+      position:static;
+      height: 50px;
+      width: 50px;
+      bottom: 5vh;
+      right: 5vh; 
+      filter: invert(75%);
+    }
+
 }
 
 /*------------------------- Links ----------------------------*/
@@ -351,6 +380,10 @@ footer{
   bottom: 60px;
   right: 60px;
   text-align: center;
+  opacity: 0.7;
+}
+.whatsapp-link:hover{
+  opacity: 10;
 }
 /* Instagram start */
 .instagram-link {
@@ -360,5 +393,9 @@ footer{
   bottom: 60px;
   right: 60px;
   text-align: center;
+  opacity: 0.7;
+}
+.instagram-link:hover{
+  opacity: 10;
 }
 /*------------------------- Links ----------------------------*/
